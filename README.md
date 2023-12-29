@@ -10,4 +10,4 @@ Install the required packages:
 
 Run the python file:
 
-    python app.py
+    python main.py
