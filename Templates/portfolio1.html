@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../CSS/portfolio.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>// Display a preloader
+        window.addEventListener('load', function () {
+            setTimeout(removeLoader, 2500); // 2.5 seconds
+          });
+        
+          function removeLoader() {
+            var loadingElement = document.getElementById('loading-overlay');
+            loadingElement.parentNode.removeChild(loadingElement);
+        
+            var loadingTextElement = document.getElementById('loading-text');
+            loadingTextElement.style.display = 'none';
+          }</script>
+</head>
+<body>
+
+    <!-- ======= Loading Overlay ======= -->
+    <div id="loading-overlay">
+        <lottie-player src="https://lottie.host/56620142-4bdd-43ed-be4f-498a06710df7/deUAFZOP9j.json" background="##FFFFFF" speed="1" style="width: 300px; height: 300px" loop autoplay direction="1" mode="normal"></lottie-player>
+        <div id="loading-text">LOADING...</div>
+    </div>
+    <!-- End of Overlay -->
+
+
+    <div class="close-button">
+        <a href="../index.html#sec"><b>✕</b></a>
+    </div>
+
+    <table>
+        <tr>
+            <td style="padding: 0px 100px 0px 300px;">
+                <div class="card">
+                    <div class="box">
+                        <div class="imgBx">
+                            <img src="../Images/cover1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <h2>Sayan Das<br><span>Web & Team Lead</span></h2>
+                            <ul>
+                                <li>Web Dev<span>9.8</span></li>
+                                <li>Python<span>9.5</span></li>
+                                <li>Java<span>9.5</span></li>
+                            </ul>
+                            <a href="https://www.linkedin.com/in/sayan-das-0a82751ba/" target="_blank"><button>Connect</button></a>
+                        </div>
+                    </div>
+                    <div class="circle">
+                        <div class="imgBx">
+                            <img src="../Images/profile1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td style="padding: 0px 200px 0px 50px;">
+                <div class="bio">
+                    <h2>ABOUT SAYAN</h2>
+                    <p>Introducing Sayan, a dedicated coding enthusiast characterised by an unyielding commitment to continuous learning. Demonstrating proficiency in mastering various programming languages and delving into cutting-edge technologies, Sayan excels in navigating complex challenges. With a meticulous attention to detail and a fervent passion for problem-solving, Sayan not only finds fulfilment in the art of coding but also actively engages in contributing to the technology community through collaborative efforts and open-source projects.</p><br>
+                </div>
+                <div class="achieve">
+                    <div class="lay">
+                        <h2>ACHIEVEMENTS</h2>
+                    <p>
+                        <ul>
+                            <li>Secured 1st in Tech Warz 2019, West Bengal's State Level Web Dev Competition.</li>
+                            <li>Awarded Best App Dev 2 Project by IIT Madras.</li>
+                            <li>Secured 5th out of 413teams in Hack'O'Pitch 2.0, IIT Madras, a National Level Hackathon.</li>
+                        </ul>
+                    </p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>    
+</body>
+</html>

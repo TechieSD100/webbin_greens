@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigate | Web'bin Greens</title>
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <ul>
+        <li><a href="../index.html" data-text="Home"><img src="../Images/nav1.jpg">Home</a></li>
+        <li><a href="../index.html#sec" data-text="Team"><img src="../Images/nav2.jpg">Team</a></li>
+        <li><a href="portfolio1.html" data-text="Portfolio1"><img src="../Images/nav3.jpg">Portfolio 1</a></li>
+        <li><a href="portfolio2.html" data-text="Portfolio2"><img src="../Images/nav4.jpg">Portfolio 2</a></li>
+        <li><a href="portfolio3.html" data-text="Portfolio3"><img src="../Images/nav5.jpg">Portfolio 3</a></li>
+        <li><a href="../index.html#contact" data-text="Contact"><img src="../Images/nav6.jpg">Contact</a></li>
+        <div class="cursor"></div>
+    </ul>
+    
+    <div class="close-icon">
+        <a href="../index.html"><i class="fas fa-times"></i></a>
+    </div>
+
+    <script>        
+        let pos = document.documentElement;
+        pos.addEventListener("mousemove", e => {
+            pos.style.setProperty('--x', e.clientX + "px");
+            pos.style.setProperty('--y', e.clientY + "px");
+        })
+    </script>
+</body>
+</html>

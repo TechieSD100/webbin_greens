@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../CSS/portfolio.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>// Display a preloader
+        window.addEventListener('load', function () {
+            setTimeout(removeLoader, 2500); // 2.5 seconds
+          });
+        
+          function removeLoader() {
+            var loadingElement = document.getElementById('loading-overlay');
+            loadingElement.parentNode.removeChild(loadingElement);
+        
+            var loadingTextElement = document.getElementById('loading-text');
+            loadingTextElement.style.display = 'none';
+          }</script>
+    <style>
+        /*Customised for long name*/
+        .card .box .content ul{
+            top: 5px;
+        }
+        .card .box .content button{
+            top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ======= Loading Overlay ======= -->
+<div id="loading-overlay">
+    <lottie-player src="https://lottie.host/56620142-4bdd-43ed-be4f-498a06710df7/deUAFZOP9j.json" background="##FFFFFF" speed="1" style="width: 300px; height: 300px" loop autoplay direction="1" mode="normal"></lottie-player>
+    <div id="loading-text">LOADING...</div>
+</div>
+<!-- End of Overlay -->
+
+
+    <div class="close-button">
+        <a href="../index.html#sec"><b>✕</b></a>
+    </div>
+
+    <table>
+        <tr>
+            <td style="padding: 0px 100px 0px 300px;">
+                <div class="card">
+                    <div class="box">
+                        <div class="imgBx">
+                            <img src="../Images/cover3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <h2>Ramanand Mahato<br><span>UI/UX Lead</span></h2>
+                            <ul>
+                                <li>UI/UX<span>8.6</span></li>
+                                <li>DSA<span>7.9</span></li>
+                                <li>Web Dev<span>5.6</span></li>
+                            </ul>
+                            <a href="https://www.linkedin.com/in/ramanand-mahato-a34370282/" target="_blank"><button>Connect</button></a>
+                        </div>
+                    </div>
+                    <div class="circle">
+                        <div class="imgBx">
+                            <img src="../Images/profile3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td style="padding: 0px 200px 0px 50px;">
+                <div class="bio">
+                    <h2>ABOUT RAMANAND</h2>
+                    <p>Meet Ramanand, a coding enthusiast driven by an insatiable thirst for learning. From mastering programming languages to diving into cutting-edge tech, Ramanand thrives on challenges. With a keen eye for detail and a passion for problem-solving.</p>
+                    <br>
+                </div>
+                <div class="achieve">
+                    <div class="lay">
+                        <h2>ACHIEVEMENTS</h2>
+                    <p>
+                        <ul>
+                            <li>Secured 1st in Acharya Hackathon 1.0</li>
+                        </ul>
+                    </p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

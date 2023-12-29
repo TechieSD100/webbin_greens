@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../CSS/portfolio.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+        // Display a preloader
+window.addEventListener('load', function () {
+	setTimeout(removeLoader, 2500); // 2.5 seconds
+  });
+
+  function removeLoader() {
+	var loadingElement = document.getElementById('loading-overlay');
+	loadingElement.parentNode.removeChild(loadingElement);
+
+	var loadingTextElement = document.getElementById('loading-text');
+	loadingTextElement.style.display = 'none';
+  }
+    </script>
+</head>
+<body>
+
+
+<!-- ======= Loading Overlay ======= -->
+<div id="loading-overlay">
+    <lottie-player src="https://lottie.host/56620142-4bdd-43ed-be4f-498a06710df7/deUAFZOP9j.json" background="##FFFFFF" speed="1" style="width: 300px; height: 300px" loop autoplay direction="1" mode="normal"></lottie-player>
+    <div id="loading-text">LOADING...</div>
+</div>
+<!-- End of Overlay -->
+
+
+    <div class="close-button">
+        <a href="../index.html#sec"><b>✕</b></a>
+    </div>
+
+    <table>
+        <tr>
+            <td style="padding: 0px 100px 0px 300px;">
+                <div class="card">
+                    <div class="box">
+                        <div class="imgBx">
+                            <img src="../Images/cover2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="content">
+                            <h2>Sk. Md. Wasef<br><span>Content Lead</span></h2>
+                            <ul>
+                                <li>Web Dev<span>8.0</span></li>
+                                <li>DSA<span>7.5</span></li>
+                                <li>Java<span>7.0</span></li>
+                            </ul>
+                            <a href="https://www.linkedin.com/in/sheikh-mohammad-wasef-625007238" target="_blank"><button>Connect</button></a>
+                        </div>
+                    </div>
+                    <div class="circle">
+                        <div class="imgBx">
+                            <img src="../Images/profile2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td style="padding: 0px 200px 0px 50px;">
+                <div class="bio">
+                    <h2>ABOUT WASEF</h2>
+                    <p>Introducing Wasef, a dedicated coding enthusiast propelled by an unyielding commitment to ongoing learning. Proficient in mastering diverse programming languages and staying abreast of cutting-edge technologies, Wasef excels in navigating challenges with precision and a solution-oriented approach.</p><br>
+                </div>
+                <div class="achieve">
+                    <div class="lay">
+                        <h2>ACHIEVEMENTS</h2>
+                    <p>
+                        <ul>
+                            <li>Secured 3rd in Imbica Online Hackathon 2.0</li>
+                        </ul>
+                    </p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

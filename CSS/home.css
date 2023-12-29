@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Default Preloader */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: 0.5s;
+  }
+  
+  #loading-text {
+        position: fixed;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        letter-spacing: 5px;
+        /* font-family: 'Amatic SC', cursive; */
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        animation: loadingAnimation 1.0s infinite;
+      }
+  
+      @keyframes loadingAnimation {
+        0% {
+          opacity: 0.2;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.2;
+        }
+      }
+
+
+
+body{
+    background: #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+
+    /* display: flex; */
+    /* justify-content: flex-end;
+    align-items: flex-end; */
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2em;
+    color: #359381;
+    pointer-events: none;
+    margin-right: 500px;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #359381;
+    background: #caf8f1;
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+    transition: ease-in-out 0.5s;
+}
+
+.navigation a:hover{
+    background: #359381;
+    color: #fff;
+}
+
+.parallax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text{
+    position: absolute;
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#bio{
+    top: 70%;
+    position: absolute;
+    font-size: 1.5em;
+    color: #f9f9f9;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); */
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+
+
+
+
+
+/* Team Section */
+
+.sec{
+    position: relative;
+    background: #003329;
+    padding: 100px;
+    top: 90px;
+    justify-content: center;
+    align-items: center;
+    
+    display: flex;
+    min-height: 100vh;
+    /* background: #111; */
+    transition: 0.5s;
+}
+
+.sec h2{
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 10px;
+    align-items: left;
+}
+
+.sec:has(.box[data-color="clr1"]:hover){
+    background: #15240b;
+}
+
+.sec:has(.box[data-color="clr2"]:hover){
+    background: #142f33;
+}
+
+.sec:has(.box[data-color="clr3"]:hover){
+    background: #5b4510;
+}
+
+
+.cont{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.cont .box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.cont .box .imgBx{
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    border: 4px solid rgba(0, 0, 0, 0.2);
+}
+
+.cont .box .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.cont .box:hover .imgBx img{
+    opacity: 0.5;
+}
+
+
+.cont .box .glass{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 15px rgba(0,0,0,0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    scale: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.cont .box .glass::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255,255,255,0.05);
+}
+
+.cont .box:hover{
+    transform: rotate(-15deg);
+    cursor: pointer;
+}
+
+.cont .box:hover .glass{
+    opacity: 1;
+    scale: 1;
+    transform: rotate(20deg);
+}
+
+.cont .box .glass h3{
+    font-size: 1.4em;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 0.8em;
+}
+
+.cont .box .glass h3 span{
+    font-weight: 400;
+    font-size: 0.6em;
+}
+
+.cont .box ul{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    color: #fff8;
+    font-size: 1em;
+    transition: 0.25s;
+}
+
+.cont .box ul:hover{
+    color: #fff;
+}
+
+.cont .box ul a{
+    color: #fff8;
+    font-size: 1.25em;
+    scale: 0;
+    transition: 0.25s;
+    transition-delay: scale calc(0.2s * var(--i));
+}
+
+.cont .box:hover ul a{
+    scale: 1;
+}
+
+.cont .box ul a:hover{
+    color: #fff;
+}
+
+
+.cont .box .popup {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    top: calc(70% + 10px); /* Initial position slightly below the card */
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    scale: 0;
+  }
+  
+  .cont .box:hover .popup {
+    transform: translateY(200%) rotate(15deg) translateX(-20%); /* Slide down 100% of its height */
+    scale: 1;
+  }
+
+
+
+
+
+
+iframe {
+    width: 100%;
+    height: 100vh;
+    border: none; 
+}
+
+.teamname h2{
+    transition:ease-in-out 0.5s;
+}
+
+.teamname h2:hover{
+    color: #60ff98;
+    font-size: 3.2em;
+    cursor: pointer;
+}
+
+.teambio{
+    color: #fff;
+}
